@@ -1,0 +1,15 @@
+
+
+version: "3"
+services: 
+  ubuntu_xrdp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ubuntu_xrdp:latest
+    ports: 
+        #- 5901:5901  #For VNC
+        - 3389:3389
+    restart: always
+    tty: true  
+    
